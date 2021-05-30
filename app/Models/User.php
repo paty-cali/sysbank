@@ -45,12 +45,45 @@ class User extends Authenticatable
     ];
 
     /**
+     * The "booted" method of the model.
+     *
+     * @return void
+     */
+    protected static function booted()
+    {
+        static::created(function (User $user) {
+            // set role user by default
+            $user->roles()->attach(1);
+        });
+    }
+
+    /**
      * User has many roles
      *
      * @return HasMany
      */
     public function roles()
     {
-        return $this->hasMany(Role::class);
+        return $this->belongsToMany(Role::class);
+    }
+
+    /**
+     * Check if user has permission
+     *
+     * return bool
+     */
+    public function hasPermission($class, $permissionName)
+    {
+        $class = str_replace('\\', '.', $class);
+        $permission = "{$class}:{$permissionName}";
+        foreach ($this->roles()->get() as $role) {
+            if (in_array('*', $role->permissions)) {
+                return true;
+            }
+            if (in_array($permission, $role->permissions)) {
+                return true;
+            }
+        }
+        return false;
     }
 }

@@ -4,4 +4,5 @@ return [
     'models' => [
         'App\Models',
     ],
+    'authorize' => true,
 ];
