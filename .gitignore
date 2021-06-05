@@ -15,3 +15,7 @@ yarn-error.log
 laravel-echo-server.json
 laravel-echo-server.lock
 composer.lock
+public/css/app.css
+public/js/app.js
+resources/lang/vendor/jdd-api/en/exceptions.php
+resources/lang/vendor/jdd-api/es/exceptions.php
