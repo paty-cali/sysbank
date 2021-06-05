@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "072ae86e023ed9d06087042efd90cbf3",
+    "content-hash": "8bd76930288e978fc468bfbed454e6a7",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -262,16 +262,10 @@
         {
             "name": "coredump/jdd-api",
             "version": "0.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/caleeli/jdd-api.git",
-                "reference": "15d82860a834cc3ee1c311a21b319dc11b84572f"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/caleeli/jdd-api/zipball/15d82860a834cc3ee1c311a21b319dc11b84572f",
-                "reference": "15d82860a834cc3ee1c311a21b319dc11b84572f",
-                "shasum": ""
+                "type": "path",
+                "url": "../jdd-api",
+                "reference": "15d82860a834cc3ee1c311a21b319dc11b84572f"
             },
             "type": "laravel-package",
             "extra": {
@@ -286,7 +280,6 @@
                     "JDD\\Api\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -296,11 +289,9 @@
                     "email": "davidcallizaya@gmail.com"
                 }
             ],
-            "support": {
-                "issues": "https://github.com/caleeli/jdd-api/issues",
-                "source": "https://github.com/caleeli/jdd-api/tree/v0.3.0"
-            },
-            "time": "2021-05-20T00:25:31+00:00"
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "coredump/jdd-flow",
